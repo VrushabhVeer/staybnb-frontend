@@ -40,7 +40,7 @@ const InfiniteScroll = () => {
                 className="w-8 h-8 object-cover rounded-full"
                 src={item.avatar}
                 alt={item.userName}
-                loading="lazy"
+                priority={true}
               />
               <h2 className="font-medium">{item.userName}</h2>
             </div>
