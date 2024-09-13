@@ -40,6 +40,11 @@ import entirePlace from "../assets/icons/home.png";
 import singleRoom from "../assets/icons/open-door.png";
 import sharedRoom from "../assets/icons/sharing.png";
 
+import michael from "../assets/images/michael.jpg";
+import emma from "../assets/images/emma.jpg";
+import james from "../assets/images/james.jpg";
+import user from "../assets/icons/user.png";
+
 // servicesData
 export const servicesData = [
   {
@@ -190,5 +195,64 @@ export const placeOptions = [
       "Guests sleep in a room or common area that may be shared with you or others.",
     imageSrc: sharedRoom,
     alt: "sharedRoom",
+  },
+];
+
+export const TESTIMONIALS = [
+  {
+    id: 1,
+    rating: "★ ★ ★ ★ ★",
+    avatar: user,
+    userName: "Alice Johnson",
+    description:
+      "Our stay at Staybnb was fantastic! The place was cozy, clean, and in a great location. Highly recommend!",
+  },
+  {
+    id: 2,
+    rating: "★ ★ ★ ★",
+    avatar: michael,
+    userName: "Michael Lee",
+    description:
+      "Had a wonderful time staying here! The host was super friendly, and the room was just as described.",
+  },
+  {
+    id: 3,
+    rating: "★ ★ ★ ★ ★",
+    avatar: user,
+    userName: "Jessica Brown",
+    description:
+      "Absolutely loved the experience! The property was beautiful, and everything was well taken care of.",
+  },
+  {
+    id: 4,
+    rating: "★ ★ ★ ★",
+    avatar: user,
+    userName: "David Williams",
+    description:
+      "Great experience overall! The location was convenient, and the space was very comfortable.",
+  },
+  {
+    id: 5,
+    rating: "★ ★ ★ ★ ★",
+    avatar: emma,
+    userName: "Emma Garcia",
+    description:
+      "The perfect getaway! The house was spotless, and the amenities were top-notch. We’ll definitely come back.",
+  },
+  {
+    id: 6,
+    rating: "★ ★ ★ ★ ★",
+    avatar: james,
+    userName: "James Martinez",
+    description:
+      "Staybnb provided an amazing stay. The service and the quality of the property exceeded our expectations!",
+  },
+  {
+    id: 7,
+    rating: "★ ★ ★ ★",
+    avatar: user,
+    userName: "Sophia Davis",
+    description:
+      "Lovely stay! The property was well maintained, and the check-in process was seamless.",
   },
 ];

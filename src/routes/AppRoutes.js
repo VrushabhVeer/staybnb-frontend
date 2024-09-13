@@ -11,6 +11,8 @@ import CompleteListing from "../components/propertyListing/CompleteListing";
 import PropertyCategory from "../components/propertyListing/PropertyCategory";
 import PropertyType from "../components/propertyListing/PropertyType";
 import Amenities from "../components/propertyListing/Amenities";
+import UploadPhotos from "../components/propertyListing/UploadPhotos";
+import Address from "../components/propertyListing/Address";
 
 const AppRoutes = () => {
   return (
@@ -24,6 +26,8 @@ const AppRoutes = () => {
       <Route path="/property_category" element={<PropertyCategory />} />
       <Route path="/property_type" element={<PropertyType />} />
       <Route path="/amenities" element={<Amenities />} />
+      <Route path="/address" element={<Address />} />
+      <Route path="/uploadphotos" element={<UploadPhotos />} />
       <Route path="/publish" element={<Publish />} />
       <Route path="/completelisting" element={<CompleteListing />} />
     </Routes>

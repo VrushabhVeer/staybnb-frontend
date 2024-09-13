@@ -1,5 +1,5 @@
 import React from "react";
-import propertyImage from "../../assets/images/property-image4.jpg";
+import propertyImage from "../../assets/images/property-image2.jpg";
 import { Link } from "react-router-dom";
 import Image from "../common/Image";
 

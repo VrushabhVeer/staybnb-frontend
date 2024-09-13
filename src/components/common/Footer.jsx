@@ -46,14 +46,14 @@ export default function Footer() {
               <Image
                 width={50}
                 height={50}
-                className="w-5"
+                className="w-5 cursor-pointer"
                 src={footerData.contactIcons.whatsapp}
                 alt="whatsapp"
               />
               <Image
                 width={50}
                 height={50}
-                className="w-5"
+                className="w-5 cursor-pointer"
                 src={footerData.contactIcons.telegram}
                 alt="telegram"
               />
@@ -67,28 +67,28 @@ export default function Footer() {
               <Image
                 width={50}
                 height={50}
-                className="w-5 md:w-7"
+                className="w-5 md:w-7 cursor-pointer"
                 src={footerData.socialIcons.facebook}
                 alt="facebook"
               />
               <Image
                 width={50}
                 height={50}
-                className="w-5 md:w-7"
+                className="w-5 md:w-7 cursor-pointer"
                 src={footerData.socialIcons.instagram}
                 alt="instagram"
               />
               <Image
                 width={50}
                 height={50}
-                className="w-5 md:w-7"
+                className="w-5 md:w-7 cursor-pointer"
                 src={footerData.socialIcons.youtube}
                 alt="youtube"
               />
               <Image
                 width={50}
                 height={50}
-                className="w-5 md:w-7"
+                className="w-5 md:w-7 cursor-pointer"
                 src={footerData.socialIcons.twitterX}
                 alt="twitterX"
               />
@@ -110,7 +110,18 @@ export default function Footer() {
           />
           <p className="text-sm font-medium tracking-wide">staybnb,</p>
         </div>
-        <p className="text-sm">Made by Vrushabh Veer.</p>
+        <p className="text-sm">
+          Made by{" "}
+          <a
+            className="hover:underline hover:text-blue-500"
+            href="https://vrushabhveer.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {" "}
+            Vrushabh Veer
+          </a>
+        </p>
       </div>
     </div>
   );

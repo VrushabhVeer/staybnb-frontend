@@ -26,7 +26,7 @@ const Hero = () => {
           <p className="text-white w-9/12 md:w-5/12 mt-5">
             {heroData.description}
           </p>
-          <Link href="/stays">
+          <Link to="/stays">
             <button className="px-10 py-3 bg-blue-500 hover:bg-blue-600 text-white tracking-wide font-medium rounded-md mt-8">
               {heroData.buttonLabel}
             </button>
