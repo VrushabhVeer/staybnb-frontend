@@ -5,7 +5,7 @@ const CompleteListing = () => {
   return (
     <div className="mb-20">
       <div className="w-[45%] md:w-[35%] lg:w-[25%] mx-auto flex items-center justify-center">
-        <LottiePlayerWrapper />
+        <LottiePlayerWrapper src={"https://lottie.host/fb15b2b7-2cf1-4e5f-adbf-a58a9b31f94c/vf3EdX1BTp.json"} />
       </div>
 
       <div className="text-center w-[90%] md:w-[40%] mx-auto">

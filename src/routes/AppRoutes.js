@@ -13,6 +13,7 @@ import PropertyType from "../components/propertyListing/PropertyType";
 import Amenities from "../components/propertyListing/Amenities";
 import UploadPhotos from "../components/propertyListing/UploadPhotos";
 import Address from "../components/propertyListing/Address";
+import NotFound from "../pages/NotFound";
 
 const AppRoutes = () => {
   return (
@@ -30,6 +31,7 @@ const AppRoutes = () => {
       <Route path="/uploadphotos" element={<UploadPhotos />} />
       <Route path="/publish" element={<Publish />} />
       <Route path="/completelisting" element={<CompleteListing />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 };

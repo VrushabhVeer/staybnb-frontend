@@ -201,14 +201,6 @@ export const placeOptions = [
 export const TESTIMONIALS = [
   {
     id: 1,
-    rating: "★ ★ ★ ★ ★",
-    avatar: user,
-    userName: "Alice Johnson",
-    description:
-      "Our stay at Staybnb was fantastic! The place was cozy, clean, and in a great location. Highly recommend!",
-  },
-  {
-    id: 2,
     rating: "★ ★ ★ ★",
     avatar: michael,
     userName: "Michael Lee",
@@ -216,12 +208,20 @@ export const TESTIMONIALS = [
       "Had a wonderful time staying here! The host was super friendly, and the room was just as described.",
   },
   {
-    id: 3,
+    id: 2,
     rating: "★ ★ ★ ★ ★",
     avatar: user,
     userName: "Jessica Brown",
     description:
       "Absolutely loved the experience! The property was beautiful, and everything was well taken care of.",
+  },
+  {
+    id: 3,
+    rating: "★ ★ ★ ★ ★",
+    avatar: emma,
+    userName: "Emma Garcia",
+    description:
+      "The perfect getaway! The house was spotless, and the amenities were top-notch. We’ll definitely come back.",
   },
   {
     id: 4,
@@ -234,21 +234,13 @@ export const TESTIMONIALS = [
   {
     id: 5,
     rating: "★ ★ ★ ★ ★",
-    avatar: emma,
-    userName: "Emma Garcia",
-    description:
-      "The perfect getaway! The house was spotless, and the amenities were top-notch. We’ll definitely come back.",
-  },
-  {
-    id: 6,
-    rating: "★ ★ ★ ★ ★",
     avatar: james,
     userName: "James Martinez",
     description:
       "Staybnb provided an amazing stay. The service and the quality of the property exceeded our expectations!",
   },
   {
-    id: 7,
+    id: 6,
     rating: "★ ★ ★ ★",
     avatar: user,
     userName: "Sophia Davis",
