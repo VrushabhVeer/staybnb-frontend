@@ -2,9 +2,17 @@ import React, { useState } from "react";
 import { placeOptions } from "../../utils/data";
 import Image from "../common/Image";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { setPropertyType } from "../../redux/dataSlice";
 
 const PropertyType = () => {
   const [selectedItem, setSelectedItem] = useState("");
+  const dispatch = useDispatch();
+
+  const handleSelect = (item) => {
+    setSelectedItem(item);
+    dispatch(setPropertyType(item))
+  }
 
   return (
     <div className="w-11/12 md:w-8/12 lg:w-6/12 mx-auto mt-10 mb-20">
@@ -21,7 +29,7 @@ const PropertyType = () => {
         {placeOptions.map(({ label, description, imageSrc, alt }) => (
           <div
             key={label}
-            onClick={() => setSelectedItem(label)}
+            onClick={() => handleSelect(label)}
             className={`flex flex-row items-center justify-between p-5 border rounded-md cursor-pointer mt-8 first:mt-0 ${
               selectedItem === label ? "border-gray-500" : "border-gray-300"
             } hover:border-gray-500`}

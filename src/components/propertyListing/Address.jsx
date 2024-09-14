@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import { setAddress } from "../../redux/dataSlice";
 
 const Address = () => {
   const [houseNumber, setHouseNumber] = useState("");
@@ -8,6 +10,8 @@ const Address = () => {
   const [city, setCity] = useState("");
   const [pinCode, setPinCode] = useState("");
   const [state, setState] = useState("");
+
+  const dispatch = useDispatch();
 
   const handleSubmit = () => {
     const address = {
@@ -19,7 +23,7 @@ const Address = () => {
       state,
     };
 
-    console.log(address)
+    dispatch(setAddress(address));
   };
 
   return (

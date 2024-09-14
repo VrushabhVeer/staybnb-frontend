@@ -2,12 +2,16 @@ import React, { useState } from "react";
 import OptionCard from "../../components/common/OptionCard";
 import { placeTypes } from "../../utils/data";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { setPropertyCategory } from "../../redux/dataSlice";
 
 const PropertyCategory = () => {
   const [selectedItem, setSelectedItem] = useState("");
+  const dispatch = useDispatch();
 
   const handleSelect = (item) => {
     setSelectedItem(item);
+    dispatch(setPropertyCategory(item));
   };
 
   return (

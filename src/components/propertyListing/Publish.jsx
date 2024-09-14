@@ -1,7 +1,31 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 const Publish = () => {
+  const navigate = useNavigate();
+  const { propertyType, propertyCategory, amenities, address, uploadPhotos } =
+    useSelector((state) => state.data);
+
+  const handleSubmit = async () => {
+    const payload = {
+      propertyType,
+      propertyCategory,
+      amenities,
+      address,
+      uploadPhotos,
+    };
+
+    console.log("payload", payload);
+
+    navigate("/completelisting");
+    // try {
+    //   await axios.psot("", payload);
+    // } catch (error) {
+    //   console.log(error)
+    // }
+  };
+
   return (
     <div className="w-11/12 mx-auto flex items-center justify-between flex-col md:flex-col lg:flex-row xl:flex-row mt-10 mb-10 md:mb-0">
       <div className="w-full">
@@ -16,11 +40,12 @@ const Publish = () => {
           manage your listing from your dashboard afterward.
         </p>
 
-        <Link to="/completelisting">
-          <button className="px-10 py-3 bg-blue-500 hover:bg-blue-600 text-white tracking-wide font-medium rounded-md mt-8">
-            Publish
-          </button>
-        </Link>
+        <button
+          onClick={handleSubmit}
+          className="px-10 py-3 bg-blue-500 hover:bg-blue-600 text-white tracking-wide font-medium rounded-md mt-8"
+        >
+          Publish
+        </button>
       </div>
       <div className="w-full">
         <video

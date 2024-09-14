@@ -2,12 +2,23 @@ import React, { useState } from "react";
 import { amenities } from "../../utils/data";
 import { Link } from "react-router-dom";
 import OptionCard from "../common/OptionCard";
+import { useDispatch } from "react-redux";
+import { setAmenities } from "../../redux/dataSlice";
 
 const Amenities = () => {
-  const [selectedItem, setSelectedItem] = useState("");
+  const [selectedItems, setSelectedItems] = useState("");
+  const dispatch = useDispatch();
 
   const handleSelect = (item) => {
-    setSelectedItem(item);
+    if (selectedItems.includes(item)) {
+      setSelectedItems(selectedItems.filter((selected) => selected !== item));
+    } else {
+      setSelectedItems([...selectedItems, item]);
+    }
+  };
+
+  const handleNext = () => {
+    dispatch(setAmenities(selectedItems));
   };
 
   return (
@@ -17,7 +28,9 @@ const Amenities = () => {
           Select the Amenities Your Place Offers
         </h1>
         <p className="mt-2 text-blue-600">
-          {selectedItem ? `${selectedItem}` : "No selection made yet"}
+          {selectedItems.length > 0
+            ? `${selectedItems.join(", ")}`
+            : "No selection made yet"}
         </p>
       </div>
 
@@ -34,7 +47,10 @@ const Amenities = () => {
       </div>
 
       <Link to="/address">
-        <button className="px-10 py-3 bg-blue-500 hover:bg-blue-600 text-white tracking-wide font-medium rounded-md mt-8">
+        <button
+          onClick={handleNext}
+          className="px-10 py-3 bg-blue-500 hover:bg-blue-600 text-white tracking-wide font-medium rounded-md mt-8"
+        >
           Next
         </button>
       </Link>
