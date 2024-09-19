@@ -1,9 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "../components/common/Image.jsx";
 import propertyImage from "../assets/images/property-image.jpg";
+import { getAllProperties } from "../utils/apis.js";
 
 const Stays = () => {
   const fav = true;
+  const [properties, setProperties] = useState([]);
+
+  useEffect(() => {
+    const fetchProperties = async () => {
+      try {
+        const response = await getAllProperties();
+        setProperties(response.data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchProperties();
+  }, []);
+
+  console.log(properties);
+
   return (
     <div className="w-11/12 mx-auto mt-10 mb-20">
       <h1 className="text-2xl md:text-4xl font-bold">Find Stays</h1>

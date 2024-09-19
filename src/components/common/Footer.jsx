@@ -44,16 +44,12 @@ export default function Footer() {
             <span className="mt-1">Contact Us</span>
             <div className="flex items-center space-x-4 mt-2">
               <Image
-                width={50}
-                height={50}
-                className="w-5 cursor-pointer"
+                className="w-6 cursor-pointer"
                 src={footerData.contactIcons.whatsapp}
                 alt="whatsapp"
               />
               <Image
-                width={50}
-                height={50}
-                className="w-5 cursor-pointer"
+                className="w-6 cursor-pointer"
                 src={footerData.contactIcons.telegram}
                 alt="telegram"
               />
@@ -65,30 +61,22 @@ export default function Footer() {
             <span>Follow us</span>
             <div className="flex items-center space-x-4 mt-3">
               <Image
-                width={50}
-                height={50}
-                className="w-5 md:w-7 cursor-pointer"
+                className="w-6 md:w-7 cursor-pointer"
                 src={footerData.socialIcons.facebook}
                 alt="facebook"
               />
               <Image
-                width={50}
-                height={50}
-                className="w-5 md:w-7 cursor-pointer"
+                className="w-6 md:w-7 cursor-pointer"
                 src={footerData.socialIcons.instagram}
                 alt="instagram"
               />
               <Image
-                width={50}
-                height={50}
-                className="w-5 md:w-7 cursor-pointer"
+                className="w-6 md:w-7 cursor-pointer"
                 src={footerData.socialIcons.youtube}
                 alt="youtube"
               />
               <Image
-                width={50}
-                height={50}
-                className="w-5 md:w-7 cursor-pointer"
+                className="w-6 md:w-7 cursor-pointer"
                 src={footerData.socialIcons.twitterX}
                 alt="twitterX"
               />
