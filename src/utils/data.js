@@ -45,6 +45,8 @@ import emma from "../assets/images/emma.jpg";
 import james from "../assets/images/james.jpg";
 import user from "../assets/icons/user.png";
 
+export const BASE_URL = "http://localhost:8000/api";
+
 // servicesData
 export const servicesData = [
   {
@@ -76,7 +78,7 @@ export const servicesData = [
 // heroData
 export const heroData = {
   tags: ["#escape", "#stays", "#travel"],
-  title: "Find a perfect place to stay.",
+  title: "Explore and Book the Perfect Place to Stay.",
   description: `Staybnb is an online marketplace that connects people who want to
                   rent out their property with people who are looking for
                   accommodations in specific locales. Staybnb offers people an easy,
@@ -131,7 +133,7 @@ export const footerData = {
     "Billing & Payments",
   ],
   address: {
-    line1: "202 Viman Nagar, Pune, Maharashtra, India",
+    line1: "202 Viman Nagar, Pune, India",
     phone: "+91 1800 3929 39",
     email: "staybnbinfo@gmail.com",
   },

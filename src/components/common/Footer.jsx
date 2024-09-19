@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <div className="bg-black text-white">
       <div className="w-11/12 mx-auto py-10 md:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-10">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-10">
           {/* Company Section */}
           <div className="flex flex-col">
             <span className="font-medium">Company</span>

@@ -4,7 +4,7 @@ import Image from "../common/Image.jsx";
 
 const Services = () => {
   return (
-    <div className="w-11/12 mx-auto mt-20">
+    <div className="w-11/12 mx-auto mt-20 md:mt-0">
       <h1 className="text-2xl md:text-4xl font-bold text-center">Services</h1>
       <p className="text-center text-gray-500 mt-1">Where Exceptional Service Meets Unforgettable Stays</p>
       <div className="flex items-center flex-col md:flex-row lg:flex-row xl:flex-row gap-10 w-full mt-14">

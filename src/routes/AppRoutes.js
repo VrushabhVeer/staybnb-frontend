@@ -14,6 +14,7 @@ import Amenities from "../components/propertyListing/Amenities";
 import UploadPhotos from "../components/propertyListing/UploadPhotos";
 import Address from "../components/propertyListing/Address";
 import NotFound from "../pages/NotFound";
+import PropertyDetails from "../pages/PropertyDetails";
 
 const AppRoutes = () => {
   return (
@@ -23,6 +24,7 @@ const AppRoutes = () => {
       <Route path="/signup" element={<Signup />} />
       <Route path="/profile" element={<Profile />} />
       <Route path="/stays" element={<Stays />} />
+      <Route path="/property_details" element={<PropertyDetails />} />
       <Route path="/propertylisting" element={<PropertyListing />} />
       <Route path="/property_category" element={<PropertyCategory />} />
       <Route path="/property_type" element={<PropertyType />} />

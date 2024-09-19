@@ -1,6 +1,8 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { addProperty } from "../../utils/apis.js";
+import toast, { Toaster } from "react-hot-toast";
 
 const Publish = () => {
   const navigate = useNavigate();
@@ -8,22 +10,31 @@ const Publish = () => {
     useSelector((state) => state.data);
 
   const handleSubmit = async () => {
-    const payload = {
-      propertyType,
-      propertyCategory,
-      amenities,
-      address,
-      uploadPhotos,
-    };
+    const formData = new FormData();
 
-    console.log("payload", payload);
+    formData.append("propertyType", propertyType);
+    formData.append("propertyCategory", propertyCategory);
+    formData.append("amenities", JSON.stringify(amenities)); // Convert to JSON if it's an array
+    formData.append("address", JSON.stringify(address)); // Convert to JSON if it's an object
 
-    navigate("/completelisting");
-    // try {
-    //   await axios.psot("", payload);
-    // } catch (error) {
-    //   console.log(error)
-    // }
+    uploadPhotos.forEach((file) => {
+      formData.append("uploadPhotos", file);
+    });
+
+    for (let pair of formData.entries()) {
+      console.log(`${pair[0]}: ${pair[1]}`);
+    }
+
+    try {
+      const response = await addProperty(formData);
+      toast.success(response.data.message, { position: "bottom-right" });
+      setTimeout(() => {
+        navigate("/completelisting");
+      }, 1500);
+    } catch (error) {
+      toast.success(error.response.data.message, { position: "bottom-right" });
+      console.log(error);
+    }
   };
 
   return (
@@ -55,6 +66,8 @@ const Publish = () => {
           width="100%"
         />
       </div>
+
+      <Toaster />
     </div>
   );
 };

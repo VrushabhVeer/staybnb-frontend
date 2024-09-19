@@ -27,10 +27,10 @@ export default function Navbar() {
   return (
     <>
       <div
-        className={`bg-[#f6fafd] px-4 md:px-8 lg:px-12 sticky top-0 z-50 ${scrollUp ? "shadow-md" : ""
+        className={`bg-[#f6fafd] sticky top-0 z-50 ${scrollUp ? "shadow-md" : ""
           }`}
       >
-        <div className="flex flex-row md:flex-row lg:flex-row py-3 md:p-4 items-center justify-between">
+        <div className="w-11/12 mx-auto flex flex-row md:flex-row lg:flex-row py-3 items-center justify-between">
           <button className="lg:hidden" onClick={handleToggle}>
             {isOpen ? (
               <svg
